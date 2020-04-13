@@ -122,7 +122,7 @@ public class Notification {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             String channelID = attributes.channelID != null ? attributes.channelID : "channel_0";
             String channelName = attributes.channelName != null ? attributes.channelName : "Default";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationManager notificationManager = getSysNotificationManager();
             NotificationChannel channel = new NotificationChannel(channelID, channelName, importance);
             notificationManager.createNotificationChannel(channel);
